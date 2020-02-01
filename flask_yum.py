@@ -15,6 +15,9 @@ def search_recipes():
     else:
         return render_template("home.html")
 
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
+
 # @app.route('/recipe{id}', methods['GET', 'POST'])
 # def display_recipe(id):
 #     if request.method == 'POST':
