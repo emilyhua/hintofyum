@@ -10,10 +10,10 @@ def search_recipes():
         content = find_from_ingredients(request.form["restaurant_name"])
         json_response = json.loads(content.text)
         print(json_response)
-        return render_template("test.html", response=json_response) if json_response != [] else render_template(
-            "test.html", response="")
+        return render_template("home.html", response=json_response) if json_response != [] else render_template(
+            "home.html", response="")
     else:
-        return render_template("test.html")
+        return render_template("home.html")
 
 # @app.route('/recipe{id}', methods['GET', 'POST'])
 # def display_recipe(id):
